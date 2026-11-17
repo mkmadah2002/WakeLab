@@ -1,4 +1,6 @@
+
 export default function Home() {
+
   return (
     <main style={{ fontFamily: "system-ui", maxWidth: 760, margin: "60px auto", padding: 20 }}>
       <h1>WakeLab API</h1>

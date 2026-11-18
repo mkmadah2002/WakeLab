@@ -18,11 +18,15 @@ deleteActiviter()
 
 
 
+
 function showform(){
-  const showform = document.getElementById("showForm")
+
   const formdiv = document.getElementById("formdiv")
-  showform.addEventListener("click",(e)=>{
+
+  addClickLisntener("showForm",(e)=>{
 
     formdiv.classList.toggle("hidden")
   })
+
+
 }

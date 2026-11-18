@@ -15,8 +15,7 @@ const afficherCards = async ()=>{
 const createCard = (id,img,title,descreotion)=>{
     const div = document.createElement("div")
     div.id= `activiter${id}`
-    div.className = "bg-neutral-primary-soft block h-max max-w-sm p-2 border border-default rounded-base shadow-xs"
-
+    div.className = "bg-neutral-primary-soft block  h-max max-w-sm p-2 border border-default rounded-base shadow-xs"
     const imgDiv = document.createElement("div")
 
     const imgelment = document.createElement("img")

@@ -1,6 +1,8 @@
 import getActiviter from "./getActiviter"
 
 const afficherCards = async ()=>{
+    console.log("hase been somend");
+    
     const activters = await getActiviter()
     const cardContaner= document.getElementById("cardContaner")
     cardContaner.replaceChildren()
@@ -12,6 +14,7 @@ const afficherCards = async ()=>{
 
 const createCard = (id,img,title,descreotion)=>{
     const div = document.createElement("div")
+    div.id= `activiter${id}`
     div.className = "bg-neutral-primary-soft block h-max max-w-sm p-2 border border-default rounded-base shadow-xs"
 
     const imgDiv = document.createElement("div")
@@ -33,22 +36,22 @@ const createCard = (id,img,title,descreotion)=>{
     const divbtn = document.createElement("div")
     divbtn.className = "flex w-full justify-evenly"
 
-    const a = document.createElement("a")
-    a.id= `activiter/${id}`
-    a.textContent= "modifier"
-    a.className ="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none hover:bg-blue-200 "
+    const modifierbtn = document.createElement("a")
+    modifierbtn.id= `modifier`
+    modifierbtn.setAttribute("data-id",id)
+    modifierbtn.textContent= "modifier"
+    modifierbtn.className ="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none hover:bg-blue-200 "
 
-    a.addEventListener("click",()=>{
-        console.log("somthing")
-    })
-    const a1 = document.createElement("a")
-    a1.id= `${id}`
-    a1.textContent= "supprimer"
-    a1.className ="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-red-500 hover:text-white focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none  "
-    a1.addEventListener("click",()=>{
+    
+    const supprimerbtn = document.createElement("a")
+    supprimerbtn.id= `supprimer`
+    supprimerbtn.setAttribute("data-id",id)
+    supprimerbtn.textContent= "supprimer"
+    supprimerbtn.className ="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-red-500 hover:text-white focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none  "
+    supprimerbtn.addEventListener("click",()=>{
         
     })
-    divbtn.append(a,a1)
+    divbtn.append(modifierbtn,supprimerbtn)
 
     div.append(imgDiv,h5,p,divbtn)
     

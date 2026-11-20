@@ -9,36 +9,96 @@
   <title>WakeLab</title>
 </head>
 
-<body>
+<body class="bg-gray-100">
   <header>
-    <nav class="bg-neutral-primary ">
+    <nav class="bg-violet-100 p-2 border-b ">
       <div class="max-w-4xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">WakeLab</span>
         </a>
-        <div>
-          <input type="text" placeholder="pressenter for serche" class="border p-1">
-        </div>
+        
       </div>
     </nav>
   </header>
-  <main>
-    <div class="max-w-4xl mx-auto my-4">
-      <div class=" mb-3">
-        <div class="flex flex-row-reverse justify-between content-between ">
-          <ul class="flex gap-1">
-            <li class="p-2">jeu</li>
-            <li class="p-2">jeu</li>
-            <li class="p-2">jeu</li>
-            <li class="p-2">jeu</li>
+  <main class="max-w-4xl mx-auto" >
+    <div class="  h-70 bg-violet-100 rounded-2xl mt-4">
+      <img src="src/assets/heroSection.webp" class="w-full h-full object-cover rounded-2xl" alt="">
+    </div>
+    <div class=" my-4 bg-white p-4 rounded-2xl">
+      <div class="mb-3">
+        <div class="flex justify-between content-between p-2 ">
+          <ul class="flex">
+            <li class="p-2 border">jeu</li>
+            <li class="p-2 border">jeu</li>
+            <li class="p-2 border">jeu</li>
+            <li class="p-2 border">jeu</li>
           </ul>
+          
+          <input type="text" placeholder="pressenter for serche" class="border p-1 rounded w-2/4 bg-white ">
           <button class=" px-4 py-2 rounded bg-green-900 text-white " id="showForm">+</button>
         </div>
-        <div class="hidden fixed top-0 left-0 w-full h-screen p-4 bg-black/50" id="formdiv">
+        
+
+
+<div class="hidden fixed top-0 left-0 w-full h-screen p-4 bg-black/50" id="formdmod">
+          <form class="max-w-lg mx-auto space-y-4 bg-white  p-4" name="formdmod">
+            <div class="w-full  flex flex-row-reverse ">
+              <div></div>
+              <button type="button" class=" px-1 text-2xl " id="remmodform" >X</button>
+            </div>
+            <div>
+              <input type="text" name="activiterid" hidden>
+              <label for="titre" class="block mb-2 text-sm font-medium text-heading">titre</label>
+              <input type="text" name="titre"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body"
+                placeholder=""  />
+              <p class="text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label for="objectifs" class="block mb-2 text-sm font-medium text-heading op">objectifs</label>
+              <input type="text" name="objectifs"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body"
+                placeholder=""  />
+              <p class="text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label for="theme" class="block mb-2 text-sm font-medium text-heading">theme</label>
+              <select name="theme"
+                class="block w-full px-3 py-2 bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand shadow-xs placeholder:text-body">
+                <option selected> --selectioner une theme--</option>
+                <option value="jeu">jeu</option>
+                <option value="apprentissage">apprentissage</option>
+                <option value="exercice">exercice</option>
+                <option value="autre">autre</option>
+              </select>
+              <p class="text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label for="duree" class="block mb-2.5 text-sm font-medium text-heading">duree</label>
+              <input type="number" name="duree"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-2.5 py-2 shadow-xs placeholder:text-body"
+                 />
+              <p class="text-sm text-red-600"></p>
+            </div>
+            <div>
+              <label for="description" class="block mb-2.5 text-sm font-medium text-heading">description</label>
+              <textarea name="description" rows="4"
+                class="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full p-3.5 shadow-xs placeholder:text-body"
+                placeholder="Description..."></textarea>
+              <p class="text-sm text-red-600"></p>
+              <button
+               class="box-border border border-default-medium  shadow-xs font-medium text-sm px-4 py-2.5 text-white bg-yellow-500 hover:bg-yellow-600 " id="submitbtn" >modifier</button>
+            </div>
+          </form>
+        </div>
+
+        
+
+        <div class="hidden fixed top-0 left-0 w-full h-screen p-4 bg-black/50" id="formdajute">
           <form class="max-w-lg mx-auto space-y-4 bg-white mt-2 p-4 " name="formdajute">
             <div class="w-full  flex flex-row-reverse ">
               <div></div>
-              <button type="button" class=" px-1 text-2xl " id="showForm" >X</button>
+              <button type="button" class=" px-1 text-2xl" id="showForm" >X</button>
             </div>
             <div>
               <label for="titre" class="block mb-2 text-sm font-medium text-heading">titre</label>
@@ -84,6 +144,15 @@
             </div>
           </form>
         </div>
+
+
+
+
+
+
+
+
+
       </div>
       <div class="w-full grid grid-cols-4 gap-4" id="cardContaner">
     </div>

@@ -19,7 +19,6 @@ const createActiviter =  () => {
             afficherCards()
         }
     
-
     })
 }
 
@@ -63,6 +62,5 @@ const formvalid = (form) => {
     }
     return isValid
 }
-
-
+export {formvalid}
 export default createActiviter

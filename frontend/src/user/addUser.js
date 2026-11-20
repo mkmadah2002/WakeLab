@@ -1,11 +1,11 @@
 const addUser = ()=>{
     console.log("something")
     const userParent = document.createElement("div")
-     userParent.classList="fix  h-screen flex justify-center content-center bg-blue-300"
+     userParent.classList="fix h-screen flex justify-center content-center bg-blue-300 fixed top-0 left-0 w-full"
     
     
-     const userInputDive = document.createElement("div")
-     userInputDive.className="w-2/4 text-center"
+    const userInputDive = document.createElement("div")
+    userInputDive.className="w-2/4 text-center"
     const userInput = document.createElement("input")
     userInput.className="border-2 bg-white w-full"
     userInput.setAttribute("type","text")

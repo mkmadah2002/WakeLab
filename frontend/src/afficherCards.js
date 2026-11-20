@@ -15,7 +15,7 @@ const afficherCards = async ()=>{
 const createCard = (id,img,title,descreotion)=>{
     const div = document.createElement("div")
     div.id= `activiter${id}`
-    div.className = "bg-neutral-primary-soft block  h-max max-w-sm p-2 border border-default rounded-base shadow-xs"
+    div.className = "bg-neutral-primary-soft block  h-max max-w-sm p-2 border border-gray-500 rounded-2xl shadow-xs"
     const imgDiv = document.createElement("div")
 
     const imgelment = document.createElement("img")
@@ -39,17 +39,14 @@ const createCard = (id,img,title,descreotion)=>{
     modifierbtn.id= `modifier`
     modifierbtn.setAttribute("data-id",id)
     modifierbtn.textContent= "modifier"
-    modifierbtn.className ="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none hover:bg-blue-200 "
+    modifierbtn.className ="border border-yellow-500 rounded-xl hover:text-white text-sm px-4 py-2.5 hover:bg-yellow-500 "
 
     
     const supprimerbtn = document.createElement("a")
     supprimerbtn.id= `supprimer`
     supprimerbtn.setAttribute("data-id",id)
     supprimerbtn.textContent= "supprimer"
-    supprimerbtn.className ="inline-flex items-center text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-red-500 hover:text-white focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none  "
-    supprimerbtn.addEventListener("click",()=>{
-        
-    })
+    supprimerbtn.className =" border border-red-500 rounded-xl text-sm px-4 py-2.5 hover:bg-red-500 hover:text-white"
     divbtn.append(modifierbtn,supprimerbtn)
 
     div.append(imgDiv,h5,p,divbtn)
